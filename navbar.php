@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-succes bg-info-subtle">
+<nav class="navbar navbar-expand-lg bg-succes bg-danger-subtle">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">SIM</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,10 +10,10 @@
           <a class="nav-link active" aria-current="page" href="/dini_is62/PROJECT/index.php">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Mahasiswa</a>
+          <a class="nav-link active" aria-current="page" href="/dini_is62/PROJECT/modul-mahasiswa/index.php">Data Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/modul-jurusan/index.php">Data Jurusan</a>
+          <a class="nav-link active" aria-current="page" href="/dini_is62/PROJECT/modul-jurusan/index.php">Data Jurusan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Data Dosen</a>
@@ -21,7 +21,7 @@
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="bg-warning" type="submit">Search</button>
       </form>
     </div>
   </div>
