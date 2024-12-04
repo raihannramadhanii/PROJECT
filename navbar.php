@@ -16,7 +16,7 @@
           <a class="nav-link active" aria-current="page" href="/dini_is62/PROJECT/modul-jurusan/index.php">Data Jurusan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Data Dosen</a>
+          <a class="nav-link active" aria-current="page" href="/dini_is62/PROJECT/modul-dosen/index.php">Data Dosen</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
