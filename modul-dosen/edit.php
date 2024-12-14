@@ -50,10 +50,10 @@ $data = mysqli_fetch_array($edit);
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Jabatan</label>
-    <select name="jabata" class="form-control" id="">
+    <select name="jabatan" class="form-control" id="">
         <option value="">-Pilih Jabatan-</option>
         <option <?php echo ($data['jabatan'] == "Full Time") ? "selected" : "" ?> value="Full Time">Full Time</option>
-        <option <?php echo ($data['jabatan'] == "Part Time") ? "selected" : "" ?> value="Part Time">Full Time</option>
+        <option <?php echo ($data['jabatan'] == "Part Time") ? "selected" : "" ?> value="Part Time">Part Time</option>
   </select>
   </div>
   <div class="mb-3">

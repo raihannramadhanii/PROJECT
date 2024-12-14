@@ -31,10 +31,10 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Jabatan</label>
-    <select name="jabata" class="form-control" id="">
+    <select name="jabatan" class="form-control" id="">
     <option value="">--Pilih Jabatan--</option>
     <option value="Full Time">Full Time</option>
-    <option value="Full Time">Part Time</option>
+    <option value="Part Time">Part Time</option>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Email</label>
