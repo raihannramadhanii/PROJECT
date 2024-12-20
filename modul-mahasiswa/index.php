@@ -56,6 +56,44 @@
       <td><?=$data['jurusan']?></td>
       <td><?=$data['nm_dos']?></td>
       <td>
+        <!-- TOMBOL DETAIL -->
+        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?=$data['nim']?>">
+                            <i class="fa-solid fa-eye"></i>
+                            </button>
+
+        <!-- MODAL DETAIL-->
+        <div class="modal fade" id="detail<?=$data['nim']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Data <?=$data['nm_mhs']?> </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img width="200" src="foto/<?=$data['foto']?>" alt="">
+                <table class="table">
+                    <tr>
+                        <td scope="col">NIM</td>
+                        <th scope="col">: <?=$data['nim']?></th>
+                    </tr>
+                    <tr>
+                        <td scope="col">Nama Lengkap</td>
+                        <th scope="col">: <?=$data['nm_mhs']?></th>
+                    </tr>
+                    <tr>
+                        <td scope="col">Tempat Lahir</td>
+                        <th scope="col">: <?=$data['tmp_lahir']?></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
         <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
       
         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id']?>">
