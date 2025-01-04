@@ -6,7 +6,7 @@ include("../koneksi.php");
 $id = $_GET['id'];
 
 #3. mengambil semua record data berdasarkan id yg dipilih
-$ambil = "SELECT * FROM jurusans WHERE id='$id'";
+$ambil = "SELECT * FROM dosens WHERE id='$id'";
  
 #4. menjalankan query 
 $edit = mysqli_query($koneksi,$ambil);
@@ -22,6 +22,7 @@ $data = mysqli_fetch_array($edit);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/all.css">
 </head>
 <body>
 <?php
@@ -33,19 +34,35 @@ $data = mysqli_fetch_array($edit);
         <div class="col-8m-auto">
         <div class="card">
   <div class="card-header">
-    <h3 class="float-start">Form Edit Data Jurusan</h3>
+    <h3 class="float-start">Form Edit Data Dosen</h3>
     
   </div>
   <div class="card-body">
   <form action="update.php" method="POST">
     <input type="hidden" name="id"  value="<?=$data['id'] ?>">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Kode Jurusan</label>
-    <input type="text" readonly value="<?=$data['kode'] ?>" name="kode" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">NIDN</label>
+    <input type="text" value="<?=$data['nidn'] ?>" name="kode" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Nama Jurusan</label>
-    <input type="text" value="<?=$data['jurusan'] ?>" name="jurusan"  class="form-control" id="exampleInputPassword1">
+    <label for="exampleInputPassword1" class="form-label">Nama Dosen</label>
+    <input type="text" value="<?=$data['nama'] ?>" name="nama"  class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+    <select name="jabatan" class="form-control" id="">
+        <option value="">-Pilih Jabatan-</option>
+        <option <?php echo ($data['jabatan'] == "Full Time") ? "selected" : "" ?> value="Full Time">Full Time</option>
+        <option <?php echo ($data['jabatan'] == "Part Time") ? "selected" : "" ?> value="Part Time">Part Time</option>
+  </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Email</label>
+    <input type="text" value="<?=$data['email'] ?>" name="email"  class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">No Hp</label>
+    <input type="text" value="<?=$data['no_hp'] ?>" name="no_hp"  class="form-control" id="exampleInputPassword1">
   </div>
   <button type="submit" class="btn btn-primary">Update</button>
 </form>
